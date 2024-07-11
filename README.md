@@ -1,7 +1,7 @@
 # Web-data-mining-semantics-Project
 Araine Rousseau & Capucine Foucher
 
-This project is composed of several different files. Here is an explanation of there use :
+This project is composed of several different files. Here is an explanation of their use :
 
 - Project.rdf is our ontology and the work that we performed on Protégé.
 - Projet_Web_Knowledge.ipynb is the notebook where you can find our work fro the part IV of the project. It is coded in python.
