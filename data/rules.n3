@@ -1,0 +1,15 @@
+
+@prefix ex: <http://example.org/ontology#> .
+
+# Rule 1: Infer ItalianRestaurant for entities that serve ItalianFood
+# { ?entity a ex:ItalianRestaurant } => { ?entity ex:serves ex:ItalianFood} .
+
+# Rule 1: Person above 50
+{ ?entity a ex:Deliveryman . ?entity ex:age ?age . FILTER(?age > 50) } => { ?entity a ex:Deliveryman } .
+
+# Rule 2: Infer RestDelivery for entities that are either Restaurant or DeliveryCompany
+{ ?entity a ex:Restaurant } => { ?entity a ex:RestDelivery } .
+{ ?entity a ex:DeliveryCompany } => { ?entity a ex:RestDelivery } .
+
+# Rule 3: Infer PopularRestaurant for entities that have a rating greater than 4.5 and are Restaurants
+# { ?entity a ex:Restaurant . ?entity ex:hasRating ?rating . FILTER(?rating > 4.5) } => { ?entity a ex:PopularRestaurant } .

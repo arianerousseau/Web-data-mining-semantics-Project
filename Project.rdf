@@ -1,0 +1,748 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3">
+        <owl:imports rdf:resource="https://schema.org/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDelivery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDelivery">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDelivery"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDeliveryService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDeliveryService">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDeliveryService"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDeliveryTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasDeliveryTime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasFoodProducts -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasFoodProducts">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasFoodProducts"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasOffer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasOffer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasOffer"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPreference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPreference">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPreference"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPreference"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Price"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasRestaurant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasRestaurant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#hasRestaurant"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#orderedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#orderedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#orderedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#worksFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#worksFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#worksFor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://schema.org/address -->
+
+    <owl:ObjectProperty rdf:about="https://schema.org/address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="https://schema.org/Place"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://schema.org/address"/>
+                <owl:allValuesFrom rdf:resource="https://schema.org/Place"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Closes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Closes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OpenDays -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OpenDays">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#age">
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#arrivalTime2 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#arrivalTime2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/arrivalTime -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/arrivalTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/availabilityEnds -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/availabilityEnds">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/closes -->
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/closes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Asian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Asian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryService"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FastFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FastFood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Indian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Indian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Italian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Italian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#FoodProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Vegetarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Vegetarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Restaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+    <owl:Class rdf:about="https://schema.org/Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryService"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Place -->
+
+    <owl:Class rdf:about="https://schema.org/Place"/>
+    
+
+
+    <!-- https://schema.org/Product -->
+
+    <owl:Class rdf:about="https://schema.org/Product"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Botanical_Bistro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Botanical_Bistro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Vegetarian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Cake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Cake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Dessert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Chips -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Chips">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Snack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Delivery_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Delivery_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#OrderDelivery"/>
+        <untitled-ontology-3:hasDelivery rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order_001"/>
+        <schema:arrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</schema:arrivalTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Earthly_Delight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Earthly_Delight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Vegetarian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Uber_It"/>
+        <untitled-ontology-3:Closes>22:30</untitled-ontology-3:Closes>
+        <untitled-ontology-3:Location>Paris</untitled-ontology-3:Location>
+        <untitled-ontology-3:OpenDays>Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday</untitled-ontology-3:OpenDays>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Ice_tea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Ice_tea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Beverage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Jenna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Jenna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <untitled-ontology-3:worksFor rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Uber_It"/>
+        <untitled-ontology-3:Location>Lyon</untitled-ontology-3:Location>
+        <untitled-ontology-3:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</untitled-ontology-3:age>
+        <untitled-ontology-3:arrivalTime2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</untitled-ontology-3:arrivalTime2>
+        <schema:arrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</schema:arrivalTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Naan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Naan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Appetizer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order_001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order_001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Order"/>
+        <untitled-ontology-3:hasFoodProducts rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza"/>
+        <untitled-ontology-3:orderedBy rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Walid"/>
+        <untitled-ontology-3:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</untitled-ontology-3:Price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pierre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pierre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <untitled-ontology-3:worksFor rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+        <untitled-ontology-3:Location>Lyon</untitled-ontology-3:Location>
+        <untitled-ontology-3:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</untitled-ontology-3:age>
+        <untitled-ontology-3:arrivalTime2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">12</untitled-ontology-3:arrivalTime2>
+        <schema:arrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</schema:arrivalTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse"/>
+        <untitled-ontology-3:hasOffer rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#SummerOffer_2024"/>
+        <untitled-ontology-3:hasRestaurant rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza_Paris"/>
+        <untitled-ontology-3:hasRestaurant rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizzeria_Roma"/>
+        <untitled-ontology-3:Location>Paris</untitled-ontology-3:Location>
+        <untitled-ontology-3:Location>Rome</untitled-ontology-3:Location>
+        <schema:availabilityEnds>02:00</schema:availabilityEnds>
+        <schema:availabilityEnds>23:00</schema:availabilityEnds>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza_Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Italian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+        <untitled-ontology-3:hasOffer rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Summer_Pizza"/>
+        <untitled-ontology-3:Closes>23</untitled-ontology-3:Closes>
+        <untitled-ontology-3:Location>Paris</untitled-ontology-3:Location>
+        <untitled-ontology-3:OpenDays>Monday, Tuesday</untitled-ontology-3:OpenDays>
+        <schema:closes>23:00</schema:closes>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizzeria_Roma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizzeria_Roma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Italian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+        <untitled-ontology-3:hasOffer rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Summer_Pizza"/>
+        <untitled-ontology-3:Location>Lyon</untitled-ontology-3:Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#SummerOffer_2024 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#SummerOffer_2024">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+        <untitled-ontology-3:hasFoodProducts rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Sushi"/>
+        <untitled-ontology-3:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-3:Price>
+        <schema:availabilityEnds rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-31T23:59:59</schema:availabilityEnds>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Summer_Pizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Summer_Pizza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Offer"/>
+        <untitled-ontology-3:hasFoodProducts rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza"/>
+        <untitled-ontology-3:Price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</untitled-ontology-3:Price>
+        <schema:availabilityEnds rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-07-25T23:59:59</schema:availabilityEnds>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Sushi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Sushi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#MainCourse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Sushi_Paris -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Sushi_Paris">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Asian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+        <untitled-ontology-3:hasOffer rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#SummerOffer_2024"/>
+        <untitled-ontology-3:Closes>23:30</untitled-ontology-3:Closes>
+        <untitled-ontology-3:Location>Paris</untitled-ontology-3:Location>
+        <untitled-ontology-3:OpenDays>Monday
+Tuesday
+Wednesday
+Thursday
+Friday</untitled-ontology-3:OpenDays>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Uber_It -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Uber_It">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#DeliveryCompany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Valentin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Valentin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliveryman"/>
+        <untitled-ontology-3:worksFor rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Deliverou"/>
+        <untitled-ontology-3:Location>Lyon</untitled-ontology-3:Location>
+        <untitled-ontology-3:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</untitled-ontology-3:age>
+        <untitled-ontology-3:arrivalTime2 rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</untitled-ontology-3:arrivalTime2>
+        <schema:arrivalTime rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</schema:arrivalTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Walid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Walid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Client"/>
+        <untitled-ontology-3:hasPreference rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizza"/>
+        <untitled-ontology-3:hasPreference rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Pizzeria_Roma"/>
+        <untitled-ontology-3:Location>Lyon</untitled-ontology-3:Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#leafy_heaven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#leafy_heaven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Vegetarian"/>
+        <untitled-ontology-3:hasDeliveryService rdf:resource="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Uber_It"/>
+        <untitled-ontology-3:Closes>23:00</untitled-ontology-3:Closes>
+        <untitled-ontology-3:Location>Paris</untitled-ontology-3:Location>
+        <untitled-ontology-3:OpenDays>Monday
+Tuesday
+Wednesday
+Thursday
+Friday</untitled-ontology-3:OpenDays>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Asian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Indian"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#Italian"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

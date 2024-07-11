@@ -1,0 +1,3 @@
+
+{ ?entity a ex:Restaurant } => { ?entity a ex:RestDelivery } .
+{ ?entity a ex:DeliveryCompany } => { ?entity a ex:RestDelivery } .

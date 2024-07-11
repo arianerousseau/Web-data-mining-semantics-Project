@@ -1,0 +1,13 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX your_ns: <http://www.semanticweb.org/efrei/ontologies/2024/6/untitled-ontology-3#>  
+
+SELECT ?person
+WHERE {
+    {
+        ?person rdf:type your_ns:Client .
+    }
+    UNION
+    {
+        ?person rdf:type your_ns:Deliveryman .
+    }
+}
