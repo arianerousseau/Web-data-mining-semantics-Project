@@ -10,4 +10,4 @@ This project is composed of several different files. Here is an explanation of t
   1. query_persons.txt : In the part IV, manipulate the ontology, the question 2 necessites this file.
   2. rest_delivery_rule.n3 : In the part IV, the question 5 writes requires of us to write and implement rules. This file contains said rules.
   3. rules.n3 : In the part IV, the question 6 writes requires of us to write and implement rules. This file contains said rules.
-  4. Report : https://docs.google.com/document/d/1Hc-KaLpdk6XD5T8VaNy-pGgRA2REw1S1gJdL4UyUwNg/edit?usp=sharing
+- Report : https://docs.google.com/document/d/1Hc-KaLpdk6XD5T8VaNy-pGgRA2REw1S1gJdL4UyUwNg/edit?usp=sharing
